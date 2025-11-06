@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      margin: 0;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    
+    .status {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .status-indicator {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    
+    .status-online { background-color: #28a745; }
+    .status-offline { background-color: #dc3545; }
+    
+    .button {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    
+    .button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .button.primary {
+      background: #28a745;
+    }
+    
+    .button.primary:hover {
+      background: #218838;
+    }
+    
+    .stats {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    
+    .stat-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    
+    .category {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 12px;
+      border-radius: 5px;
+      margin: 5px 0;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📧 Email Categorizer</h1>
+  </div>
+  
+  <div class="status">
+    <div>
+      <span class="status-indicator status-offline" id="statusIndicator"></span>
+      <span id="statusText">Checking service...</span>
+    </div>
+  </div>
+  
+  <button class="button primary" id="categorizeCurrent">
+    🚀 Categorize Current Email
+  </button>
+  
+  <button class="button" id="openDashboard">
+    📊 Open Dashboard
+  </button>
+  
+  <button class="button" id="startService">
+    ⚡ Start Background Service
+  </button>
+  
+  <div class="stats" id="stats" style="display: none;">
+    <h3>📈 Statistics</h3>
+    <div class="stat-item">
+      <span>Total Processed:</span>
+      <span id="totalProcessed">0</span>
+    </div>
+    <div class="stat-item">
+      <span>Last Run:</span>
+      <span id="lastRun">Never</span>
+    </div>
+    <div class="stat-item">
+      <span>Categories:</span>
+      <span id="categoryCount">0</span>
+    </div>
+  </div>
+  
+  <div id="categories" style="display: none;">
+    <h3>📂 Categories</h3>
+    <div class="category">📂 Promotions</div>
+    <div class="category">🔔 Notifications</div>
+    <div class="category">📌 Important</div>
+    <div class="category">💼 Jobs</div>
+    <div class="category">🚫 Spam</div>
+    <div class="category">⚠️ Alerts</div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
+

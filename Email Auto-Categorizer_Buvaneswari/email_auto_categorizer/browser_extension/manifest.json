@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Email Auto-Categorizer",
+  "version": "1.0",
+  "description": "Automatically categorize your emails with AI",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "http://localhost:8501/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Email Categorizer"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js"],
+      "matches": ["https://mail.google.com/*"]
+    }
+  ]
+}
+

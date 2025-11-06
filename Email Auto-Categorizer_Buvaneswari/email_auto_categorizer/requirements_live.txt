@@ -1,0 +1,15 @@
+streamlit
+pandas
+scikit-learn
+numpy
+PyPDF2
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+python-dotenv
+schedule
+fastapi
+uvicorn
+requests
+plotly

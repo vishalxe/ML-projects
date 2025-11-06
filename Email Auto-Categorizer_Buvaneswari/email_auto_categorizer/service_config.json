@@ -1,0 +1,13 @@
+{
+  "processing_interval": 300,
+  "confidence_threshold": 0.6,
+  "max_emails_per_run": 50,
+  "categories": {
+    "promotions": "\ud83d\udcc2 Promotions",
+    "notifications": "\ud83d\udd14 Notifications",
+    "important": "\ud83d\udccc Important",
+    "jobs": "\ud83d\udcbc Jobs",
+    "spam": "\ud83d\udeab Spam",
+    "alerts": "\u26a0\ufe0f Alerts"
+  }
+}
