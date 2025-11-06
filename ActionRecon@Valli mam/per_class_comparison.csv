@@ -1,0 +1,9 @@
+Class,lstm_precision,lstm_recall,lstm_f1,resnet_transformer_precision,resnet_transformer_recall,resnet_transformer_f1,tcn_precision,tcn_recall,tcn_f1,transformer_precision,transformer_recall,transformer_f1
+climbing_stairs,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0,0,0
+descending_stairs,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0,0,0
+eating,100.0,95.95,97.93,100.0,100.0,100.0,100.0,100.0,100.0,0,0,0
+running,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0,0,0
+sitting,98.95,39.17,56.12,50.0,100.0,66.67,99.81,100.0,99.9,0,0,0
+standing,62.18,100.0,76.68,0.0,0.0,0.0,100.0,99.81,99.9,0,0,0
+walking,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0,0,0
+walking_fast,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0,0,0

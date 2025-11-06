@@ -1,0 +1,12 @@
+,precision,recall,f1-score,support
+climbing_stairs,1.0,1.0,1.0,281.0
+descending_stairs,1.0,1.0,1.0,281.0
+eating,1.0,1.0,1.0,29.0
+running,1.0,1.0,1.0,281.0
+sitting,1.0,1.0,1.0,281.0
+standing,1.0,1.0,1.0,281.0
+walking,1.0,1.0,1.0,281.0
+walking_fast,1.0,1.0,1.0,281.0
+accuracy,1.0,1.0,1.0,1.0
+macro avg,1.0,1.0,1.0,1996.0
+weighted avg,1.0,1.0,1.0,1996.0

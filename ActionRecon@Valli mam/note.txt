@@ -1,0 +1,84 @@
+@echo off
+echo ========================================
+echo HAR Models - Batch Execution Script
+echo ========================================
+echo.
+
+echo Starting comprehensive HAR model evaluation...
+echo This will run all 4 models and aggregate results for journal publication.
+echo.
+
+echo [1/5] Running LSTM Model...
+echo ----------------------------------------
+python run_lstm_model.py
+if %errorlevel% neq 0 (
+    echo ERROR: LSTM model failed to run
+    pause
+    exit /b 1
+)
+echo LSTM model completed successfully!
+echo.
+
+echo [2/5] Running ResNet-Transformer Model...
+echo ----------------------------------------
+python run_resnet_transformer_model.py
+if %errorlevel% neq 0 (
+    echo ERROR: ResNet-Transformer model failed to run
+    pause
+    exit /b 1
+)
+echo ResNet-Transformer model completed successfully!
+echo.
+
+echo [3/5] Running TCN Model...
+echo ----------------------------------------
+python run_tcn_model.py
+if %errorlevel% neq 0 (
+    echo ERROR: TCN model failed to run
+    pause
+    exit /b 1
+)
+echo TCN model completed successfully!
+echo.
+
+echo [4/5] Running Transformer Model...
+echo ----------------------------------------
+python run_transformer_model.py
+if %errorlevel% neq 0 (
+    echo ERROR: Transformer model failed to run
+    pause
+    exit /b 1
+)
+echo Transformer model completed successfully!
+echo.
+
+echo [5/5] Aggregating Results...
+echo ----------------------------------------
+python aggregate_results.py
+if %errorlevel% neq 0 (
+    echo ERROR: Results aggregation failed
+    pause
+    exit /b 1
+)
+echo Results aggregation completed successfully!
+echo.
+
+echo ========================================
+echo ALL MODELS COMPLETED SUCCESSFULLY!
+echo ========================================
+echo.
+echo Generated files:
+echo - Individual model results (JSON, CSV, PNG)
+echo - Performance summary tables
+echo - Comparative visualizations
+echo - Statistical analysis
+echo - Comprehensive report
+echo.
+echo Check the following files for results:
+echo - comprehensive_results_report.md
+echo - performance_summary.csv
+echo - Various PNG visualization files
+echo.
+echo Results are ready for journal publication!
+echo.
+pause
